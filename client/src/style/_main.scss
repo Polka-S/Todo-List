@@ -1,0 +1,21 @@
+@use "./variables" as vars;
+
+body {
+  font-family: vars.$font-family;
+  font-size: vars.$font-size;
+  color: vars.$text-color;
+  line-height: vars.$line-height;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.5rem;
+}

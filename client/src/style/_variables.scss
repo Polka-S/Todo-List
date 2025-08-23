@@ -1,0 +1,30 @@
+@use "./font" as *;
+
+$max-width: 1920px;
+
+// colors
+$purple: #6C63FF;
+$pink: #a53385;
+$black: #252525;
+$white: #F7F7F7;
+
+// text
+$text-color: $white;
+$font-size: 1.2rem;
+$line-height: 1.6;
+
+// fonts
+$font-family: "Roboto", sans-serif;
+// $Roboto-Thin: 'Roboto-Thin', sans-serif;
+// $Roboto-Light: 'Roboto-Light', sans-serif;
+// $Roboto-Regular: 'Roboto-Regular', sans-serif;
+// $Roboto-Medium: 'Roboto-Medium', sans-serif;
+// $Roboto-Bold: 'Roboto-Bold', sans-serif;
+
+// default
+$border-radius: 20px;
+
+// component
+$component-bg-color: $white;
+$component-text-color: $black;
+$component-accent-text-color: $purple;

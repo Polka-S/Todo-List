@@ -1,0 +1,83 @@
+@use "../../style/variables" as vars;
+
+.welcomePage {
+  background: 
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(vars.$purple, 0.5),
+      rgba(vars.$purple, 0) 70.71%
+    ),
+    radial-gradient(
+      circle at 6.7% 75%,
+      rgba(vars.$pink, 0.5),
+      rgba(vars.$black, 0) 70.71%
+    ),
+    radial-gradient(
+      circle at 93.3% 75%,
+      rgba(vars.$purple, 0.5),
+      rgba(vars.$purple, 0) 70.71%
+    ),
+    vars.$white;
+ 
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .card {
+    width: 100%;
+    text-align: center;
+    border-radius: vars.$border-radius;
+    color: vars.$component-text-color;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 2rem;
+
+    background: rgba(vars.$white, 0.85);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 
+      0 10px 30px rgba(vars.$black, 0.15),
+      0 0 0 1px rgba(vars.$purple, 0.1);
+    backdrop-filter: blur(8px);
+    max-width: 400px;
+
+    input {
+      width: 100%;
+      padding: 14px 16px;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(vars.$black, 0.15);
+      border-radius: 8px;
+      font-size: 16px;
+      box-sizing: border-box;
+      background: rgba(vars.$white, 0.9);
+      transition: all 0.2s ease;
+
+      &:focus {
+        outline: none;
+        border-color: vars.$purple;
+        box-shadow: 0 0 0 3px rgba(vars.$purple, 0.2);
+      }
+    }
+
+    button {
+      width: 100%;
+      padding: 14px 16px;
+      background-color: vars.$purple;
+      color: vars.$white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: darken(vars.$purple, 10%);
+      }
+    }
+  }
+}
