@@ -1,0 +1,78 @@
+@use "./variables" as vars;
+
+@mixin background {
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(vars.$purple, 0.5),
+      rgba(vars.$purple, 0) 70.71%
+    ),
+    radial-gradient(
+      circle at 6.7% 75%,
+      rgba(vars.$pink, 0.5),
+      rgba(vars.$black, 0) 70.71%
+    ),
+    radial-gradient(
+      circle at 93.3% 75%,
+      rgba(vars.$purple, 0.5),
+      rgba(vars.$purple, 0) 70.71%
+    ),
+    vars.$white;
+}
+
+@mixin component() {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  max-width: 100%;
+  text-align: center;
+  border-radius: vars.$border-radius;
+  color: vars.$component-text-color;
+  padding: 2.5rem;
+
+  background: rgba(vars.$white, 0.85);
+  box-shadow: 
+    0 10px 30px rgba(vars.$black, 0.15),
+    0 0 0 1px rgba(vars.$purple, 0.1);
+  backdrop-filter: blur(8px);
+}
+
+@mixin input {
+  width: 100%;
+  padding: vars.$element-padding;
+  margin-bottom: 1rem;
+  border: vars.$border;
+  border-radius: vars.$small-border-radius;
+  font-size: vars.$font-size;
+  box-sizing: border-box;
+  background: rgba(vars.$white, 0.9);
+  transition: vars.$transition;
+
+  &:focus {
+    border-color: vars.$purple;
+    box-shadow: 0 0 0 3px rgba(vars.$purple, 0.2);
+  }
+
+  &::placeholder {
+    font-size: vars.$small-font-size;
+  }
+}
+
+@mixin button {
+  width: 100%;
+  padding: vars.$element-padding;
+  background-color: vars.$purple;
+  color: vars.$white;
+  border: none;
+  border-radius: vars.$small-border-radius;
+  font-size: vars.$small-font-size;
+  font-weight: 600;
+  cursor: pointer;
+  transition: vars.$transition;
+
+  &:hover {
+    background-color: vars.$element-hover-color;
+  }
+}

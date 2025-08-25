@@ -1,4 +1,6 @@
+@use "./reset";
 @use "./variables" as vars;
+
 
 body {
   font-family: vars.$font-family;
@@ -10,6 +12,7 @@ body {
 .container {
   max-width: 800px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 h1, h2, h3 {
@@ -18,4 +21,10 @@ h1, h2, h3 {
 
 h2 {
   font-size: 1.5rem;
+}
+
+a {
+  color: vars.$accent-text-color;
+  font-weight: 400;
+  transition: vars.$transition;
 }

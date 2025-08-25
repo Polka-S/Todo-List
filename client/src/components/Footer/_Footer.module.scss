@@ -1,0 +1,22 @@
+@use "../../style/variables" as vars;
+@use "../../style/mixin" as mixin;
+
+.footer {
+  font-size: vars.$small-font-size;
+
+  .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    max-width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+
+    .links {
+      display: flex;
+      gap: 10px;
+    }
+  }
+}

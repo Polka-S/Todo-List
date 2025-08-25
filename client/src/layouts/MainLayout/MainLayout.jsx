@@ -5,8 +5,11 @@ import styles from './_MainLayout.module.scss';
 
 const MainLayout = () => {
   return (
-    <div className={styles.MainLayout}>
-      <Outlet />
+    <div className={styles.mainLayout}>
+      {/* <Header /> */}
+      <div className={styles.content}>
+        <Outlet />
+      </div>
       <Footer />
     </div>
   );

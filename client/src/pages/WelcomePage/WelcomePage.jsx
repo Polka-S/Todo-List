@@ -1,5 +1,4 @@
 import styles from './_WelcomePage.module.scss';
-import Footer from '../../components/Footer/Footer';
 import { useState } from 'react';
 
 export default function WelcomePage({ setUserName }) {
