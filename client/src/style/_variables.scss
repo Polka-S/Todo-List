@@ -9,12 +9,14 @@ $pink: #a53385;
 $black: #252525;
 $white: #F7F7F7;
 
-$purple-darken: color.adjust($purple, $lightness: -10%);
-$purple-light: color.adjust($purple, $lightness: 5%);
+$dark-purple: #4a3cc5;
+$dark-pink: #7a2a6b;
+$dark-black: #1a1a1a;
+$dark-white: #2a2a2a;
 
 // text
 $text-color: $white;
-$accent-text-color: $purple-light;
+$accent-text-color: $purple;
 
 $font-size: 1.2rem;
 $small-font-size: 1.1rem;
@@ -37,7 +39,11 @@ $component-accent-text-color: $purple;
 
 // element
 $element-padding: 14px 16px;
-$element-hover-color: $purple-darken;
+$element-hover-color: $dark-purple;
+
+// icon
+$icon-size: 37px;
+$icon-padding: 10px;
 
 // transition
 $transition: all 0.6s ease

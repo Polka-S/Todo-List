@@ -1,38 +1,17 @@
 @use "./variables" as vars;
 
-@mixin background {
-  background:
-    radial-gradient(
-      circle at 50% 0%,
-      rgba(vars.$purple, 0.5),
-      rgba(vars.$purple, 0) 70.71%
-    ),
-    radial-gradient(
-      circle at 6.7% 75%,
-      rgba(vars.$pink, 0.5),
-      rgba(vars.$black, 0) 70.71%
-    ),
-    radial-gradient(
-      circle at 93.3% 75%,
-      rgba(vars.$purple, 0.5),
-      rgba(vars.$purple, 0) 70.71%
-    ),
-    vars.$white;
-}
-
 @mixin component() {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   gap: 10px;
   max-width: 100%;
-  text-align: center;
   border-radius: vars.$border-radius;
-  color: vars.$component-text-color;
+  color: var(--text-color-component);
   padding: 2.5rem;
 
-  background: rgba(vars.$white, 0.85);
+  background: var(--bg-component);
   box-shadow: 
     0 10px 30px rgba(vars.$black, 0.15),
     0 0 0 1px rgba(vars.$purple, 0.1);
@@ -74,5 +53,22 @@
 
   &:hover {
     background-color: vars.$element-hover-color;
+  }
+}
+
+@mixin icon-button {
+  cursor: pointer;
+  transition: vars.$transition;
+  background-color: vars.$purple;
+  padding: vars.$icon-padding;
+  border-radius: vars.$small-border-radius;
+  
+  &:hover {
+      background-color: vars.$element-hover-color;
+  }
+    
+  img {
+    width: vars.$icon-size;
+    height: auto;
   }
 }

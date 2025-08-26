@@ -2,7 +2,6 @@
 @use "../../style/variables" as vars;
 
 .mainLayout {
-  @include mixin.background;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

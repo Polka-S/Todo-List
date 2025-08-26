@@ -1,11 +1,17 @@
 @use "./reset";
 @use "./variables" as vars;
+@use "./theme";
+@use "./mixin" as mixin;
 
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
 
 body {
+  background: var(--bg-gradient);
   font-family: vars.$font-family;
   font-size: vars.$font-size;
-  color: vars.$text-color;
+  color: var(--text-color);
   line-height: vars.$line-height;
 }
 
@@ -13,6 +19,22 @@ body {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 1rem;
+}
+
+.component {
+  @include mixin.component;
+}
+
+input {
+  @include mixin.input;
+}
+
+.button {
+  @include mixin.button;
+}
+
+.icon-button {
+  @include mixin.icon-button;
 }
 
 h1, h2, h3 {

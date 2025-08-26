@@ -1,0 +1,60 @@
+@use "./_variables.scss" as vars;
+
+:root {
+  --purple: 108, 99, 255;
+  --pink: 165, 51, 133;
+  --black: 37, 37, 37;
+  --white: 247, 247, 247;
+
+  --bg-gradient:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(var(--purple), 0.5),
+      rgba(var(--purple), 0) 70.71%
+    ),
+    radial-gradient(
+      circle at 6.7% 75%,
+      rgba(var(--pink), 0.5),
+      rgba(var(--black), 0) 70.71%
+    ),
+    radial-gradient(
+      circle at 93.3% 75%,
+      rgba(var(--purple), 0.5),
+      rgba(var(--purple), 0) 70.71%
+    ),
+    rgba(var(--white));
+    
+  --bg-component: rgba(var(--white), 0.6);
+  --text-color: rgba(var(--white));
+  --text-color-component: rgba(var(--black));
+
+}
+
+[data-theme="dark"] {
+  --dark-purple: 74, 60, 197;
+  --dark-pink: 122, 42, 107;
+  --dark-black: 26, 26, 26;
+  --white: 247, 247, 247;
+
+  --bg-gradient:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(var(--dark-purple), 0.4),
+      rgba(var(--dark-purple), 0) 70.71%
+    ),
+    radial-gradient(
+      circle at 6.7% 75%,
+      rgba(var(--dark-pink), 0.4),
+      rgba(var(--dark-black), 0) 70.71%
+    ),
+    radial-gradient(
+      circle at 93.3% 75%,
+      rgba(var(--dark-purple), 0.4),
+      rgba(var(--dark-purple), 0) 70.71%
+    ),
+    rgba(var(--dark-black));
+  
+  --bg-component: rgba(var(--dark-black), 0.6);
+  --text-color: rgba(var(--white));
+  --text-color-component: rgba(var(--white));
+}
