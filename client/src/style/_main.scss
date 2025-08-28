@@ -38,6 +38,50 @@ body {
   @include mixin.input;
 }
 
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 26px;
+  height: 26px;
+  border: 2px solid vars.$component-accent-color;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: vars.$transition;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+
+  &:checked {
+    background-color: vars.$component-accent-color;
+    border-color: vars.$component-accent-color;
+  }
+
+  &:checked::after {
+    content: "";
+    width: 8px;
+    height: 14px;
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    display: block;
+  }
+
+  &:hover {
+    border-color: vars.$element-hover-color;
+    background-color: vars.$element-hover-color;
+
+    &:checked {
+      background-color: vars.$element-hover-color;
+
+      &::after {
+        border-color: #fff;
+      }
+    }
+  }
+}
+
+
 .button {
   @include mixin.button;
   width: 100%;
@@ -45,6 +89,10 @@ body {
 
 .icon-button {
   @include mixin.icon-button;
+}
+
+.mini-icon-button {
+  @include mixin.mini-icon-button;
 }
 
 .icon {

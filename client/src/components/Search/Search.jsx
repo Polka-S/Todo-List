@@ -22,7 +22,7 @@ export default function Search() {
       <select name="note" id="note-type">
         <option value="all">all</option>
         <option value="done">done</option>
-        <option value="not-done">not done</option>
+        <option value="to-do">to do</option>
       </select>
       <ToggleTheme />
     </div>

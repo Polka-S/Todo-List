@@ -4,13 +4,13 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: start;
+  align-items: center;
   gap: vars.$gap;
   max-width: 100%;
   width: $width;
   border-radius: vars.$component-border-radius;
   color: var(--text-color-component);
-  padding: 2.5rem;
+  padding: vars.$space-s;
 
   background: var(--bg-component);
   box-shadow: 
@@ -39,7 +39,7 @@
 }
 
 @mixin button{
-  padding: vars.$element-padding;
+  padding: vars.$button-padding;
   background-color: vars.$purple;
   color: vars.$white;
   border: none;
@@ -72,6 +72,25 @@
     
   img {
     width: vars.$icon-size;
+    height: auto;
+  }
+}
+
+@mixin mini-icon-button {
+  cursor: pointer;
+  transition: vars.$transition;
+  height: 100%;
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  &:hover {
+    translate: 0 2px;
+  }
+    
+  img {
+    width: vars.$mini-icon-size;
     height: auto;
   }
 }

@@ -7,8 +7,6 @@
   flex-direction: row;
   gap: vars.$gap;
 
-  
-
   .field {
     @include mixin.input;
     width: 100%;
@@ -41,6 +39,7 @@
 
   select {
     flex: 1;
+    min-width: 15%;
     padding: vars.$element-padding;
     text-transform: uppercase;
     appearance: none;
