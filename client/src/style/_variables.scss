@@ -14,12 +14,28 @@ $dark-pink: #7a2a6b;
 $dark-black: #1a1a1a;
 $dark-white: #2a2a2a;
 
+// space
+$space-xs: 0.5rem;
+$space-s: 1rem;
+$space-m: 1.25rem;
+$space-l: 1.5rem;
+$space-xl: 2rem;
+$space-2xl: 2.5rem;
+
+// font-size
+$font-size-xs: 1rem;
+$font-size-s: 1.2rem;
+$font-size-m: 1.7rem;
+$font-size-l: 2rem;
+
+// border-radius
+$border-radius-s: 0.5rem;
+$border-radius-m: 1rem;
+$border-radius-l: 1.25rem;
+
 // text
 $text-color: $white;
 $accent-text-color: $purple;
-
-$font-size: 1.2rem;
-$small-font-size: 1.1rem;
 
 $line-height: 1.6;
 
@@ -27,22 +43,22 @@ $line-height: 1.6;
 $font-family: "Roboto", sans-serif;
 
 // border
-$border-radius: 20px;
-$small-border-radius: 8px;
-
 $border: 1px solid rgba($black, 0.15);
 
 // component
 $component-bg-color: $white;
 $component-text-color: $black;
 $component-accent-text-color: $purple;
+$component-border-radius: $border-radius-m;
+$gap: $space-s;
 
 // element
-$element-padding: 14px 16px;
+$element-padding: 7px 16px;
 $element-hover-color: $dark-purple;
+$element-border-radius: $border-radius-s;
 
 // icon
-$icon-size: 37px;
+$icon-size: 35px;
 $icon-padding: 10px;
 
 // transition

@@ -10,31 +10,45 @@
 body {
   background: var(--bg-gradient);
   font-family: vars.$font-family;
-  font-size: vars.$font-size;
+  font-size: vars.$font-size-s;
   color: var(--text-color);
   line-height: vars.$line-height;
 }
 
 .container {
   max-width: 800px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .component {
   @include mixin.component;
 }
 
-input {
+.card {
+  @include mixin.component(500px);
+}
+
+.input {
   @include mixin.input;
 }
 
 .button {
   @include mixin.button;
+  width: 100%;
 }
 
 .icon-button {
   @include mixin.icon-button;
+}
+
+.icon {
+  @include mixin.icon;
 }
 
 h1, h2, h3 {
