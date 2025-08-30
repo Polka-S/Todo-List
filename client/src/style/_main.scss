@@ -24,6 +24,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .component {
@@ -44,7 +45,7 @@ input[type="checkbox"] {
   width: 26px;
   height: 26px;
   border: 2px solid vars.$component-accent-color;
-  border-radius: 4px;
+  border-radius: vars.$border-radius-s;
   cursor: pointer;
   transition: vars.$transition;
   display: inline-flex;
@@ -61,7 +62,7 @@ input[type="checkbox"] {
     content: "";
     width: 8px;
     height: 14px;
-    border: solid #fff;
+    border: solid vars.$text-color;
     border-width: 0 3px 3px 0;
     transform: rotate(45deg);
     display: block;
@@ -75,7 +76,7 @@ input[type="checkbox"] {
       background-color: vars.$element-hover-color;
 
       &::after {
-        border-color: #fff;
+        border-color: vars.$text-color;
       }
     }
   }

@@ -19,20 +19,20 @@ export default function WelcomePage({ setUserName }) {
     <div className={styles.welcomePage}>
       <div className="container">
         <div className="card">
-          <h2>Добро пожаловать!</h2>
-          <p>Введите ваше имя чтобы начать</p>
+          <h2>Hello!</h2>
+          <p>Enter your name:</p>
           <form onSubmit={handleSubmit}>
             <div className={styles.fields}>
               <input
                 type="text"
-                placeholder="Ваше имя"
+                placeholder="Your name"
                 value={name}
                 className='input'
                 onChange={(e) => setName(e.target.value)}
                 required
               />
             </div>
-            <button className='button' type="submit">Продолжить</button>
+            <button className='button' type="submit">continue</button>
           </form>
         </div>
       </div>

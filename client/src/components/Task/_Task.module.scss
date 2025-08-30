@@ -1,6 +1,6 @@
 @use "../../style/variables" as vars;
 
-.note {
+.task {
   width: 100%;
   display: flex;
   align-items: center;
@@ -10,10 +10,10 @@
     flex: 0 0 auto;
   }
 
-  .noteText {
+  .taskText {
     flex: 1;
 
-    .noteTitle {
+    .taskTitle {
       position: relative;
       display: inline-block;
 
@@ -28,14 +28,14 @@
       }
     }
 
-    .noteDescription {
+    .taskDescription {
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.3s ease;
     }
 
     &.open {
-      .noteDescription {
+      .taskDescription {
         max-height: 200px;
       }
     }

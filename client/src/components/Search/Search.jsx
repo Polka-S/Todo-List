@@ -7,19 +7,13 @@ import ToggleTheme from '../ToggleTheme/ToggleTheme';
 export default function Search() {
   const [search, setSearch] = useState('');
 
-  function handleChange(target) {
-    const value = target.value;
-
-    setSearch(value);
-  }
-
   return (
     <div className={styles.search}>
       <div className={styles.field}>
-        <input type="search" placeholder='Search note...' value={search} onChange={handleChange} />
+        <input type="search" placeholder='Search task...' value={search} onChange={e => setSearch(e.target.value)} />
         <img className='icon' src={searchIcon} alt="search" />
       </div>
-      <select name="note" id="note-type">
+      <select name="task" id="task-type">
         <option value="all">all</option>
         <option value="done">done</option>
         <option value="to-do">to do</option>

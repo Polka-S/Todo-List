@@ -1,0 +1,10 @@
+@use "../../../style/mixin" as mixin;
+@use "../../../style/variables" as vars;
+
+
+.addTaskBtn {
+  .plusBtn {
+    @include mixin.icon-button(50%, vars.$square-button-padding);
+    box-shadow: 0 4px 8px rgba(vars.$black, 0.3);
+  }
+}
