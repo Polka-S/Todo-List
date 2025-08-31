@@ -1,4 +1,4 @@
-@use "../../style/variables" as vars;
+@use "../../../style/variables" as vars;
 
 .task {
   width: 100%;
@@ -32,6 +32,7 @@
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.3s ease;
+      font-size: vars.$font-size-xs;
     }
 
     &.open {

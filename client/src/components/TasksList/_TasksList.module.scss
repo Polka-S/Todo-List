@@ -1,0 +1,7 @@
+@use "../../style/variables" as vars;
+
+.tasksList {
+  display: flex;
+  flex-direction: column;
+  gap: vars.$gap;
+}

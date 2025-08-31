@@ -2,10 +2,9 @@ import styles from './_HomePage.module.scss';
 
 import Search from '../../components/Search/Search';
 import AddTask from '../../components/AddTask/AddTask';
-import { useState } from 'react';
+import TasksList from '../../components/TasksList/TasksList';
 
 export default function HomePage() {
-  const [todos, setTodos] = useState(localStorage.getItem('todos') || []);
 
   return (
     <div className={styles.homePage}>
@@ -15,7 +14,7 @@ export default function HomePage() {
             <Search />
           </div>
           <div className={styles.main}>
-
+            <TasksList />
           </div>
         </div>
       </div>

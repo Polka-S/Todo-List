@@ -1,8 +1,11 @@
 import { useState } from 'react';
 import styles from './_AddTaskWindow.module.scss';
+import { useTasks } from '../../../contexts/TasksContext';
+
 
 const AddTaskWindow = () => {
   const [task, setTask] = useState({});
+  const { addTask } = useTasks();
 
   function handleChange({ target }) {
     const { name, value } = target;
@@ -12,7 +15,12 @@ const AddTaskWindow = () => {
     }));
   };
 
-  // function handleButton
+  function handleClick() {
+    if (task.task.trim()) {
+      addTask(task.task, task.description);
+      setTask({});
+    }
+  }
 
   return (
     <div className={styles.addTaskWindow}>
@@ -33,7 +41,7 @@ const AddTaskWindow = () => {
           value={task.description || ''}
           onChange={handleChange}
         ></textarea>
-        <button type='button' className='button'>Save</button>
+        <button type='button' className='button' onClick={handleClick}>Save</button>
       </form>
     </div>
   );

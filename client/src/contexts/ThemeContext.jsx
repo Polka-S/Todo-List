@@ -38,7 +38,7 @@ export const ThemeProvider = ({ children }) => {
 
   return (
     <ThemeContext.Provider value={value}>
-      {children}
+      { children }
     </ThemeContext.Provider>
   );
 }
