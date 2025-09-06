@@ -9,10 +9,13 @@ const AddTaskWindow = () => {
 
   function handleChange({ target }) {
     const { name, value } = target;
-    setTask((prevTask) => ({
-      ...prevTask,
-      [name]: value
-    }));
+    if (name === 'task' && value.length <= 30 ||
+        name === 'description' && value.length < 400) {
+      setTask((prevTask) => ({
+        ...prevTask,
+        [name]: value
+      }));
+    }
   };
 
   function handleClick() {

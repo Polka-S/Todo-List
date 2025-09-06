@@ -1,15 +1,22 @@
 import styles from './_TasksList.module.scss';
 import { useTasks } from '../../contexts/TasksContext';
 import Task from './Task/Task';
+import { Scrollbars } from 'react-custom-scrollbars-4';
 
 export default function TasksList() {
-  const { tasks } = useTasks()
+  const { filteredTasks } = useTasks()
   
   return (
-    <div className={styles.tasksList}>
-      {tasks.map(task => (
-        <Task id={task.id} task={task.task} description={task.description} completed={task.completed} />
-      ))}
-    </div>
+    <Scrollbars
+      autoHide
+      autoHeight
+      autoHeightMax={100}
+    >
+      <div className={styles.tasksList}>
+        {filteredTasks.map(task => (
+          <Task key={task.id} task={task} />
+        ))}
+      </div>
+    </Scrollbars>
   );
 }
