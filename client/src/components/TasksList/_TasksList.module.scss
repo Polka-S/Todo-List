@@ -4,4 +4,18 @@
   display: flex;
   flex-direction: column;
   gap: vars.$gap;
+  overflow: hidden;
+  position: relative;
+  padding: 0 vars.$space-2xl;
+
+  .spacer {
+    height: 0;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.track-vertical {
+  right: 0;
+  bottom: 0;
 }

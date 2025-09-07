@@ -18,7 +18,8 @@ const AddTaskWindow = () => {
     }
   };
 
-  function handleClick() {
+  function handleSubmit(e) {
+    e.preventDefault()
     if (task.task.trim()) {
       addTask(task.task, task.description);
       setTask({});
@@ -27,7 +28,7 @@ const AddTaskWindow = () => {
 
   return (
     <div className={styles.addTaskWindow}>
-      <form className='component'>
+      <form className='component' onSubmit={handleSubmit}>
         <input
           type="text"
           className='input'
@@ -44,7 +45,13 @@ const AddTaskWindow = () => {
           value={task.description || ''}
           onChange={handleChange}
         ></textarea>
-        <button type='button' className='button' onClick={handleClick}>Save</button>
+        <button
+          type='submit'
+          className='button'
+          // onClick={handleSubmit}
+        >
+          Save
+        </button>
       </form>
     </div>
   );

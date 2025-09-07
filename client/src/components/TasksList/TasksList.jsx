@@ -10,12 +10,24 @@ export default function TasksList() {
     <Scrollbars
       autoHide
       autoHeight
-      autoHeightMax={100}
+      autoHeightMin={100}
+      autoHeightMax={600}
+      renderView={props => (
+        <div
+          {...props}
+          style={{
+            ...props.style,
+            marginBottom: 0,
+          }}
+        />
+      )}
     >
       <div className={styles.tasksList}>
         {filteredTasks.map(task => (
           <Task key={task.id} task={task} />
         ))}
+        
+        <div className={styles.spacer} />
       </div>
     </Scrollbars>
   );

@@ -103,6 +103,12 @@ export default function Task(props) {
         </div>
       )}
       <div className={styles.icons}>
+        { !props.task.description && 
+          <div
+            className={styles.buttonStub}
+            style={{ width: iconsSize }}
+          />
+        }
         { props.task.description && !isChanging &&
           <button
             className='mini-icon-button'

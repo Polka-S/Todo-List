@@ -7,16 +7,27 @@
   .content {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     gap: vars.$gap;
     max-width: 100%;
     text-align: center;
-    padding: 0.5rem;
+    padding: vars.$space-xs;
 
     .links {
       display: flex;
       gap: vars.$gap;
+    }
+
+  }
+
+  @media(max-width: vars.$tablet-max-width) {
+    font-size: vars.$font-size-2xs;
+    .content {
+      flex-direction: column;
+      justify-content: center;
+      gap: vars.$space-2xs;
     }
   }
 }

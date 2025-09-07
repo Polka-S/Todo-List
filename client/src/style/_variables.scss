@@ -3,6 +3,10 @@
 
 $max-width: 1920px;
 
+$phone-max-width: 480px;
+$tablet-max-width: 768px;
+$laptop-max-width: 1024px;
+
 // colors
 $purple: #6C63FF;
 $pink: #a53385;
@@ -15,6 +19,7 @@ $dark-black: #1a1a1a;
 $dark-white: #2a2a2a;
 
 // space
+$space-2xs: 0.05rem;
 $space-xs: 0.5rem;
 $space-s: 1rem;
 $space-m: 1.25rem;
@@ -23,6 +28,7 @@ $space-xl: 2rem;
 $space-2xl: 2.5rem;
 
 // font-size
+$font-size-2xs: 0.5rem;
 $font-size-xs: 1rem;
 $font-size-s: 1.2rem;
 $font-size-m: 1.7rem;
